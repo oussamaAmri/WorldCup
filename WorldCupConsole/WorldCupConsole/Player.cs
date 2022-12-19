@@ -39,6 +39,6 @@ public class Player
 
     public string Tostring()
     {
-        return "[" + this.lastName + "]" + " " + "[" + firstName +"]" + " " + "[" + age + "] ans" + " " + "[" + Position.Forward + "]";
+        return "[" + this.lastName + "]" + " " + "[" + firstName +"]" + " " + "[" + age + "] ans" + " " + "[" + Position + "]";
     }
 }
