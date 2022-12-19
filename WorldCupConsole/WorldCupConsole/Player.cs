@@ -4,8 +4,8 @@ public class Player
 {
     public string lastName;
     public string firstName;
-    public string age;
-    public string position;
+    public int age;
+    public Position position;
 
     public string LastName
     {
@@ -18,14 +18,27 @@ public class Player
         get { return this.firstName; }
         set { this.firstName = value; }
     }
-    public string Age
+    public int Age
     {
         get { return this.age; }
         set { this.age = value; }
     }
-    public string Position
+    public Position Position
     {
         get { return this.position; }
         set { this.position = value; }
+    }
+
+    public Player(string lastName,string firstName,int age,Position position )
+    {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.age = age;
+        this.position = position;
+    }
+
+    public string Tostring()
+    {
+        return "[" + this.lastName + "]" + " " + "[" + firstName +"]" + " " + "[" + age + "] ans" + " " + "[" + Position.Forward + "]";
     }
 }
