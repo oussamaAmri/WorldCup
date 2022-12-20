@@ -26,11 +26,7 @@ public class Program
         Team TeamB = new Team(listPlayersB, "Maroc", true);
 
         Match match = new Match(TeamA, TeamB, 2, 1, matchTypes: MatchTypes.SemiFinals);
-
-
         listEquipes.Add(match);
-        
-        
         Group group = new Group(listEquipes, groupe: Groupe.GroupeA);
 
         //Console.WriteLine(match.ToStringMatch());
@@ -42,9 +38,13 @@ public class Program
             Console.WriteLine(r.Name);
         }
 
-        Console.WriteLine(group.Groupe);
+        var resultMatch = group.GetAllMatchs(TeamA);
+        foreach(var r in resultMatch)
+        {
+            Console.WriteLine(r.ToStringMatch());
+        }
 
-        
+        Console.WriteLine(group.Groupe);
     }
 }
 //Console.WriteLine(Match.GetMatchDuration());

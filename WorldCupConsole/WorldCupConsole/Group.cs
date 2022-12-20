@@ -26,13 +26,27 @@ public class Group
     public List<Team> GetTeams() 
     {
         var listEquipe = new List<Team>();
-        foreach(var m in listOfMatchs)
+        foreach(var e in listOfMatchs)
         {
-            listEquipe.Add(m.TeamA);
-            listEquipe.Add(m.TeamB);
+            listEquipe.Add(e.TeamA);
+            listEquipe.Add(e.TeamB);
         }
-        var listEquipes = listEquipe.DistinctBy(m => m.Name);
+        var listEquipes = listEquipe.DistinctBy(e => e.Name);
         return listEquipes.ToList();
     }
+
+    public List<Match> GetAllMatchs(Team equipe)
+    {
+        var listMatch = new List<Match>();
+        foreach(var m in listOfMatchs)
+        {
+            if((m.TeamA.Name == equipe.Name) || (m.TeamB.Name == equipe.Name))
+            {
+                listMatch.Add(m);
+            }
+        }
+        return listMatch;
+    }
+    
 }
 
