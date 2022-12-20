@@ -2,5 +2,11 @@
 public enum Groupe
 {
     GroupeA,
-    GroupeB
+    GroupeB,
+    GroupeC,
+    GroupeD,
+    GroupeE,
+    GroupeF,
+    GroupeG,
+    GroupeH
 }
