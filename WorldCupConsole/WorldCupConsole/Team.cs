@@ -1,4 +1,6 @@
-﻿namespace WorldCupConsole;
+﻿using System.IO;
+
+namespace WorldCupConsole;
 
 public class Team
 {
@@ -29,5 +31,10 @@ public class Team
         this.listPlayers = listPlayers;
         this.name = name;
         this.isHost = isHost;
+    }
+
+    public string getTeams()
+    {
+        return "[" + name + "] : " + " " + "[" + listPlayers + "] :" + " " + "[" + IsHost + "]";
     }
 }
