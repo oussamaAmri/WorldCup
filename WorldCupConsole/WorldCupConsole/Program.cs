@@ -15,9 +15,11 @@ listPlayersA.Add(player1);
 listPlayersB.Add(player2);
 listPlayersB.Add(player3);
 
-Team TeamA = new Team(listPlayersA,"France",true);
-Team TeamB = new Team(listPlayersB, "Maroc", false);
+Team TeamA = new Team(listPlayersA,"France",false);
+Team TeamB = new Team(listPlayersB, "Maroc", true);
 
-Match match = new Match(TeamA, TeamB, 1, 1,matchTypes:MatchTypes.SemiFinals) ;
+Match match = new Match(TeamA, TeamB, 2, 1,matchTypes:MatchTypes.SemiFinals) ;
 
 Console.WriteLine(match.ToStringMatch());
+Console.WriteLine(match.GetWinner());
+//Console.WriteLine(Match.GetMatchDuration());

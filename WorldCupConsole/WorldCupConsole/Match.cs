@@ -7,6 +7,7 @@ public class Match
     private int teamAscore;
     private int teamBscore;
     private MatchTypes matchTypes;
+    private const int Duree = 90;
 
     public Team TeamA
     {
@@ -47,8 +48,30 @@ public class Match
         this.matchTypes=matchTypes;
     }
 
+    static public int GetMatchDuration()
+    {
+        return Duree;
+    }
+
     public string ToStringMatch()
     {
         return "[" + teamA.Name + "]" + " " + "[" + teamB.Name + "]" + " " + "[" + teamAscore + "]" + " " + "[" + teamBscore + "]" + " " + "[" + matchTypes + "]";
     }
+
+    public Team GetWinner()
+    {
+        if(teamAscore == teamBscore)
+        {
+            return null;
+        }
+        else
+        {
+            if (teamAscore < teamBscore)
+            {
+                return teamB;
+            }
+            else return teamA;
+        }
+    }
+
 }
