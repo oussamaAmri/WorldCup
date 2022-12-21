@@ -231,24 +231,143 @@ public class Program
         Group groupG = new Group(groupGMatchs, Groupe.GroupeG);
         Group groupH = new Group(groupHMatchs, Groupe.GroupeH);
 
+        //WorldCup
+/*        var resultGagnantA = groupA.GetQualifiedTeams();
+        var resultGagnantB = groupB.GetQualifiedTeams();
+        var resultGagnantC = groupC.GetQualifiedTeams();
+        var resultGagnantD = groupD.GetQualifiedTeams();
+        var resultGagnantE = groupE.GetQualifiedTeams();
+        var resultGagnantF = groupF.GetQualifiedTeams();
+        var resultGagnantG = groupG.GetQualifiedTeams();
+        var resultGagnantH = groupH.GetQualifiedTeams();*/
+        List<Match> listOf16Matchs = new List<Match>();
+        List<Group> listOf8Groups = new List<Group>();
+        listOf8Groups.Add(groupA);
+        listOf8Groups.Add(groupB);
+        listOf8Groups.Add(groupC);
+        listOf8Groups.Add(groupD);
+        listOf8Groups.Add(groupE);
+        listOf8Groups.Add(groupF);
+        listOf8Groups.Add(groupG);
+        listOf8Groups.Add(groupH);
+
+        Match matchI1 = new Match(belgique, maroc, 0, 2, MatchTypes.RoundOf16);
+        Match matchI2 = new Match(croatie, canada, 4, 1, MatchTypes.RoundOf16);
+        Match matchI3 = new Match(croatie, belgique, 0, 0, MatchTypes.RoundOf16);
+        Match matchI4 = new Match(canada, maroc, 1, 2, MatchTypes.RoundOf16);
+
+        Match matchJ1 = new Match(suisse, cameroun, 1, 0, MatchTypes.RoundOf16);
+        Match matchJ2 = new Match(bresil, serbie, 2, 0, MatchTypes.RoundOf16);
+        Match matchJ3 = new Match(cameroun, serbie, 3, 3, MatchTypes.RoundOf16);
+        Match matchJ4 = new Match(bresil, suisse, 1, 0, MatchTypes.RoundOf16);
+        Match matchJ5 = new Match(serbie, suisse, 2, 3, MatchTypes.RoundOf16);
+        Match matchJ6 = new Match(cameroun, bresil, 1, 0, MatchTypes.RoundOf16);
+
+        Match matchJ7 = new Match(uruguay, coreeDuSud, 0, 0, MatchTypes.RoundOf16);
+        Match matchJ8 = new Match(portugal, ghana, 3, 2, MatchTypes.RoundOf16);
+        Match matchJ9 = new Match(coreeDuSud, ghana, 2, 3, MatchTypes.RoundOf16);
+        Match matchJ10 = new Match(portugal, uruguay, 2, 0, MatchTypes.RoundOf16);
+        Match matchJ11 = new Match(ghana, uruguay, 0, 2, MatchTypes.RoundOf16);
+        Match matchJ12 = new Match(coreeDuSud, portugal, 2, 1, MatchTypes.RoundOf16);
+
+        listOf16Matchs.Add(matchI1);
+        listOf16Matchs.Add(matchI2);
+        listOf16Matchs.Add(matchI3);
+        listOf16Matchs.Add(matchI4);
+        listOf16Matchs.Add(matchJ1);
+        listOf16Matchs.Add(matchJ2);
+        listOf16Matchs.Add(matchJ3);
+        listOf16Matchs.Add(matchJ4);
+        listOf16Matchs.Add(matchJ5);
+        listOf16Matchs.Add(matchJ6);
+        listOf16Matchs.Add(matchJ7);
+        listOf16Matchs.Add(matchJ8);
+        listOf16Matchs.Add(matchJ9);
+        listOf16Matchs.Add(matchJ10);
+        listOf16Matchs.Add(matchJ11);
+        listOf16Matchs.Add(matchJ12);
+
+        WorldCup worldCup = new WorldCup("2022","Qatar", listOf8Groups, listOf16Matchs);
+        var resultWorldCup = worldCup.GetRoundOf16();
+        foreach(var r in resultWorldCup)
+        {
+            Console.WriteLine(r.ToStringMatch());
+        }
+
+        //Console.WriteLine(worldCup.GetRoundOf16(listOf16Matchs));
         //Console.WriteLine(match.ToStringMatch());
         //Console.WriteLine(match.GetWinner());
         //Console.WriteLine(Match.GetMatchDuration());
 
-        var result = groupA.GetTeams();
+        //var result = groupA.GetTeams();
+        
+        // Huitième de  finale 
+        
+        //GroupeA
+/*        var resultGagnantA = groupA.GetQualifiedTeams(); 
         Console.WriteLine("Equipe " + groupA.Groupe);
-        foreach (var r in result)
+        foreach (var r in resultGagnantA)
+        {
+            Console.WriteLine(r.Name);
+        }
+        */
+
+        //GroupB
+/*        var resultGagnantB = groupB.GetQualifiedTeams();
+        Console.WriteLine("Equipe " + groupB.Groupe);
+        foreach (var r in resultGagnantB)
+        {
+            Console.WriteLine(r.Name);
+        }
+        //GroupC
+        var resultGagnantC = groupC.GetQualifiedTeams();
+        Console.WriteLine("Equipe " + groupC.Groupe);
+        foreach (var r in resultGagnantC)
         {
             Console.WriteLine(r.Name);
         }
 
-        Console.WriteLine();
+        //GroupD
+        var resultGagnantD = groupD.GetQualifiedTeams();
+        Console.WriteLine("Equipe " + groupD.Groupe);
+        foreach (var r in resultGagnantD)
+        {
+            Console.WriteLine(r.Name);
+        }
+        //GroupE
+        var resultGagnantE = groupE.GetQualifiedTeams();
+        Console.WriteLine("Equipe " + groupE.Groupe);
+        foreach (var r in resultGagnantE)
+        {
+            Console.WriteLine(r.Name);
+        }
+        //GroupF
+        var resultGagnantF = groupF.GetQualifiedTeams();
+        Console.WriteLine("Equipe " + groupF.Groupe);
+        foreach (var r in resultGagnantF)
+        {
+            Console.WriteLine(r.Name);
+        }
+        //GroupG
+        var resultGagnantG = groupG.GetQualifiedTeams();
+        Console.WriteLine("Equipe " + groupG.Groupe);
+        foreach (var r in resultGagnantG)
+        {
+            Console.WriteLine(r.Name);
+        }
+        //GroupH
+        var resultGagnantH = groupH.GetQualifiedTeams();
+        Console.WriteLine("Equipe " + groupH.Groupe);
+        foreach (var r in resultGagnantH)
+        {
+            Console.WriteLine(r.Name);
+        }
 
         var resultMatch = groupE.GetAllMatchs(japon);
         Console.WriteLine("Parcours équipe " + japon.Name);
         foreach (var r in resultMatch)
         {
             Console.WriteLine(r.ToStringMatch());
-        }
+        }*/
     }
 }

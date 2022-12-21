@@ -70,7 +70,10 @@ public class Match
             {
                 return teamB;
             }
-            else return teamA;
+            else
+            {
+                return teamA;
+            }
         }
     }
 
