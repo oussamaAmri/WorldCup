@@ -241,8 +241,8 @@ public class Program
         var resultGagnantG = groupG.GetQualifiedTeams();
         var resultGagnantH = groupH.GetQualifiedTeams();*/
         List<Match> listOf16Matchs = new List<Match>();
-        List<Group> listOf8Groups = new List<Group>();
-        listOf8Groups.Add(groupA);
+        List<Match> listOf8Groups = new List<Match>();
+/*        listOf8Groups.Add(groupA);
         listOf8Groups.Add(groupB);
         listOf8Groups.Add(groupC);
         listOf8Groups.Add(groupD);
@@ -250,7 +250,7 @@ public class Program
         listOf8Groups.Add(groupF);
         listOf8Groups.Add(groupG);
         listOf8Groups.Add(groupH);
-
+*/
         Match matchI1 = new Match(belgique, maroc, 0, 2, MatchTypes.RoundOf16);
         Match matchI2 = new Match(croatie, canada, 4, 1, MatchTypes.RoundOf16);
         Match matchI3 = new Match(croatie, belgique, 0, 0, MatchTypes.RoundOf16);
@@ -287,9 +287,30 @@ public class Program
         listOf16Matchs.Add(matchJ11);
         listOf16Matchs.Add(matchJ12);
 
+
+        Match matchJ13 = new Match(serbie, suisse, 2, 3, MatchTypes.QuaterFinals);
+        Match matchJ14 = new Match(cameroun, bresil, 1, 0, MatchTypes.QuaterFinals);
+
+        Match matchJ15 = new Match(uruguay, coreeDuSud, 0, 0, MatchTypes.QuaterFinals);
+        Match matchJ16 = new Match(portugal, ghana, 3, 2, MatchTypes.QuaterFinals);
+        Match matchJ17 = new Match(coreeDuSud, ghana, 2, 3, MatchTypes.QuaterFinals);
+        Match matchJ18 = new Match(portugal, uruguay, 2, 0, MatchTypes.QuaterFinals);
+        Match matchJ19 = new Match(ghana, uruguay, 0, 2, MatchTypes.QuaterFinals);
+        Match matchJ20 = new Match(coreeDuSud, portugal, 2, 1, MatchTypes.QuaterFinals);
+
+        listOf8Groups.Add(matchJ13);
+        listOf8Groups.Add(matchJ14);
+        listOf8Groups.Add(matchJ15);
+        listOf8Groups.Add(matchJ16);
+        listOf8Groups.Add(matchJ17);
+        listOf8Groups.Add(matchJ18);
+        listOf8Groups.Add(matchJ19);
+        listOf8Groups.Add(matchJ20);
+
         WorldCup worldCup = new WorldCup("2022","Qatar", listOf8Groups, listOf16Matchs);
-        var resultWorldCup = worldCup.GetRoundOf16();
-        foreach(var r in resultWorldCup)
+        var resultWorldCup16 = worldCup.GetRoundOf16();
+        var resultWorldCup8 = worldCup.GetQuaterFinals();
+        foreach (var r in resultWorldCup8)
         {
             Console.WriteLine(r.ToStringMatch());
         }

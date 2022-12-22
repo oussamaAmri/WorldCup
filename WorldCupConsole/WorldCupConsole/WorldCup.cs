@@ -6,7 +6,7 @@ public class WorldCup
 {
     private string year;
     private string place;
-    private List<Group> listOf8Groups = new List<Group>();
+    private List<Match> listOf8Groups = new List<Match>();
     private List<Match> listOf16Matchs = new List<Match>();
 
     public string Year
@@ -21,7 +21,7 @@ public class WorldCup
         set { this.place = value; }
     }
 
-    public List<Group> ListOf8Groups
+    public List<Match> ListOf8Groups
     {
         get { return this.listOf8Groups; }
         set { this.listOf8Groups = value; }
@@ -32,7 +32,7 @@ public class WorldCup
         set { this.listOf16Matchs = value; }
     }
 
-    public WorldCup(string year, string place, List<Group> listOf8Groups, List<Match> listOf16Matchs)
+    public WorldCup(string year, string place, List<Match> listOf8Groups, List<Match> listOf16Matchs)
     {
         this.year = year;
         this.place = place;
@@ -51,5 +51,19 @@ public class WorldCup
             }
         }
         return listOf16Match;
+    }
+
+    public List<Match> GetQuaterFinals()
+    {
+        var list8 = new List<Team>();
+        var listOf8Match = new List<Match>();
+        foreach (var listOf8 in listOf8Groups)
+        {
+            if (listOf8.MatchTypes == MatchTypes.QuaterFinals)
+            {
+                listOf8Match.Add(listOf8);
+            }
+        }
+        return listOf8Match;
     }
 }
