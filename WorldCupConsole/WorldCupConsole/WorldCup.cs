@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Diagnostics.Tracing;
+using System.Text.RegularExpressions;
 
 namespace WorldCupConsole;
 
@@ -41,7 +42,6 @@ public class WorldCup
     }
     public List<Match> GetRoundOf16()
     {
-        var list16 = new List<Team>();
         var listOf16Match = new List<Match>();
         foreach (var listOf16 in listOf16Matchs)
         {
@@ -55,7 +55,6 @@ public class WorldCup
 
     public List<Match> GetQuaterFinals()
     {
-        var list8 = new List<Team>();
         var listOf8Match = new List<Match>();
         foreach (var listOf8 in listOf8Groups)
         {
@@ -65,5 +64,44 @@ public class WorldCup
             }
         }
         return listOf8Match;
+    }
+
+    public List<Match> GetSemiFinals()
+    {
+        var listDM = new List<Match>();
+        foreach (var listOfDM in listOf8Groups)
+        {
+            if (listOfDM.MatchTypes == MatchTypes.SemiFinals)
+            {
+                listDM.Add(listOfDM);
+            }
+        }
+        return listDM;
+    }
+
+    public Match GetThirdPlacePlayOff()
+    {
+        Match place=null;
+        foreach (var p in listOf8Groups)
+        {
+            if (p.MatchTypes == MatchTypes.ThirdPlacePlayOff)
+            {
+                place = p;
+            }
+        }
+        return place;
+    }
+
+    public Match GetFinal()
+    {
+        Match place = null;
+        foreach (var p in listOf8Groups)
+        {
+            if (p.MatchTypes == MatchTypes.Final)
+            {
+                place = p;
+            }
+        }
+        return place;
     }
 }

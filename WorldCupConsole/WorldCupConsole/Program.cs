@@ -1,5 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Diagnostics.Tracing;
+using System.Text.RegularExpressions;
 using WorldCupConsole;
+using Group = WorldCupConsole.Group;
+using Match = WorldCupConsole.Match;
 
 public class Program
 {
@@ -307,88 +311,101 @@ public class Program
         listOf8Groups.Add(matchJ19);
         listOf8Groups.Add(matchJ20);
 
+        Match matchJ21 = new Match(coreeDuSud, ghana, 2, 3, MatchTypes.SemiFinals);
+        Match matchJ22 = new Match(portugal, uruguay, 2, 0, MatchTypes.SemiFinals);
+        Match matchJ23 = new Match(ghana, uruguay, 0, 2, MatchTypes.SemiFinals);
+        Match matchJ24 = new Match(coreeDuSud, portugal, 2, 1, MatchTypes.Final);
+
+        listOf8Groups.Add(matchJ21);
+        listOf8Groups.Add(matchJ22);
+        listOf8Groups.Add(matchJ23);
+        listOf8Groups.Add(matchJ24);
+
         WorldCup worldCup = new WorldCup("2022","Qatar", listOf8Groups, listOf16Matchs);
         var resultWorldCup16 = worldCup.GetRoundOf16();
         var resultWorldCup8 = worldCup.GetQuaterFinals();
-        foreach (var r in resultWorldCup8)
-        {
-            Console.WriteLine(r.ToStringMatch());
-        }
-
+        //        var resultSemiFinal = worldCup.GetSemiFinals();
+        var resultSemiFinal = worldCup.GetFinal();
+        Console.WriteLine(resultSemiFinal.ToStringMatch());
+        /*        foreach (var r in resultSemiFinal)
+                {
+                    Console.WriteLine(r.ToStringMatch());
+                }
+        */
         //Console.WriteLine(worldCup.GetRoundOf16(listOf16Matchs));
         //Console.WriteLine(match.ToStringMatch());
         //Console.WriteLine(match.GetWinner());
         //Console.WriteLine(Match.GetMatchDuration());
 
         //var result = groupA.GetTeams();
-        
+
         // Huitième de  finale 
-        
+
         //GroupeA
-/*        var resultGagnantA = groupA.GetQualifiedTeams(); 
-        Console.WriteLine("Equipe " + groupA.Groupe);
-        foreach (var r in resultGagnantA)
-        {
-            Console.WriteLine(r.Name);
-        }
-        */
+        /*        var resultGagnantA = groupA.GetQualifiedTeams(); 
+                Console.WriteLine("Equipe " + groupA.Groupe);
+                foreach (var r in resultGagnantA)
+                {
+                    Console.WriteLine(r.Name);
+                }
+                */
 
         //GroupB
-/*        var resultGagnantB = groupB.GetQualifiedTeams();
-        Console.WriteLine("Equipe " + groupB.Groupe);
-        foreach (var r in resultGagnantB)
-        {
-            Console.WriteLine(r.Name);
-        }
-        //GroupC
-        var resultGagnantC = groupC.GetQualifiedTeams();
-        Console.WriteLine("Equipe " + groupC.Groupe);
-        foreach (var r in resultGagnantC)
-        {
-            Console.WriteLine(r.Name);
-        }
+        /*        var resultGagnantB = groupB.GetQualifiedTeams();
+                Console.WriteLine("Equipe " + groupB.Groupe);
+                foreach (var r in resultGagnantB)
+                {
+                    Console.WriteLine(r.Name);
+                }
+                //GroupC
+                var resultGagnantC = groupC.GetQualifiedTeams();
+                Console.WriteLine("Equipe " + groupC.Groupe);
+                foreach (var r in resultGagnantC)
+                {
+                    Console.WriteLine(r.Name);
+                }
 
-        //GroupD
-        var resultGagnantD = groupD.GetQualifiedTeams();
-        Console.WriteLine("Equipe " + groupD.Groupe);
-        foreach (var r in resultGagnantD)
-        {
-            Console.WriteLine(r.Name);
-        }
-        //GroupE
-        var resultGagnantE = groupE.GetQualifiedTeams();
-        Console.WriteLine("Equipe " + groupE.Groupe);
-        foreach (var r in resultGagnantE)
-        {
-            Console.WriteLine(r.Name);
-        }
-        //GroupF
-        var resultGagnantF = groupF.GetQualifiedTeams();
-        Console.WriteLine("Equipe " + groupF.Groupe);
-        foreach (var r in resultGagnantF)
-        {
-            Console.WriteLine(r.Name);
-        }
-        //GroupG
-        var resultGagnantG = groupG.GetQualifiedTeams();
-        Console.WriteLine("Equipe " + groupG.Groupe);
-        foreach (var r in resultGagnantG)
-        {
-            Console.WriteLine(r.Name);
-        }
-        //GroupH
-        var resultGagnantH = groupH.GetQualifiedTeams();
-        Console.WriteLine("Equipe " + groupH.Groupe);
-        foreach (var r in resultGagnantH)
-        {
-            Console.WriteLine(r.Name);
-        }
+                //GroupD
+                var resultGagnantD = groupD.GetQualifiedTeams();
+                Console.WriteLine("Equipe " + groupD.Groupe);
+                foreach (var r in resultGagnantD)
+                {
+                    Console.WriteLine(r.Name);
+                }
+                //GroupE
+                var resultGagnantE = groupE.GetQualifiedTeams();
+                Console.WriteLine("Equipe " + groupE.Groupe);
+                foreach (var r in resultGagnantE)
+                {
+                    Console.WriteLine(r.Name);
+                }
+                //GroupF
+                var resultGagnantF = groupF.GetQualifiedTeams();
+                Console.WriteLine("Equipe " + groupF.Groupe);
+                foreach (var r in resultGagnantF)
+                {
+                    Console.WriteLine(r.Name);
+                }
+                //GroupG
+                var resultGagnantG = groupG.GetQualifiedTeams();
+                Console.WriteLine("Equipe " + groupG.Groupe);
+                foreach (var r in resultGagnantG)
+                {
+                    Console.WriteLine(r.Name);
+                }
+                //GroupH
+                var resultGagnantH = groupH.GetQualifiedTeams();
+                Console.WriteLine("Equipe " + groupH.Groupe);
+                foreach (var r in resultGagnantH)
+                {
+                    Console.WriteLine(r.Name);
+                }
 
-        var resultMatch = groupE.GetAllMatchs(japon);
-        Console.WriteLine("Parcours équipe " + japon.Name);
-        foreach (var r in resultMatch)
-        {
-            Console.WriteLine(r.ToStringMatch());
-        }*/
+                var resultMatch = groupE.GetAllMatchs(japon);
+                Console.WriteLine("Parcours équipe " + japon.Name);
+                foreach (var r in resultMatch)
+                {
+                    Console.WriteLine(r.ToStringMatch());
+                }*/
     }
 }
