@@ -128,4 +128,27 @@ public class WorldCup
 
         return final.GetWinner();
     }
+
+    public List<Match> GetJourney(Team equipe)
+    {
+        var listMatch = new List<Match>();
+        foreach(var match in listOf16Matchs)
+        {
+            if ((match.TeamA.Name == equipe.Name) || (match.TeamB.Name == equipe.Name))
+            {
+                listMatch.Add(match);
+            }
+        }
+        foreach(var g in listOf8Groups)
+        {
+            foreach(var i in g.ListOfMatchs)
+            {
+                if(i.TeamA.Name == equipe.Name || i.TeamB.Name == equipe.Name)
+                {
+                    listMatch.Add(i);
+                }
+            }
+        }
+        return listMatch;
+    }
 }

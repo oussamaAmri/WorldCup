@@ -285,14 +285,19 @@ public class Program
         listOf16Matchs.Add(match1_1);
 
         WorldCup worldCup = new WorldCup("2022","Qatar", listOf8Groups, listOf16Matchs);
-
+        Team equipe = new Team(canadaPlayers, "Canada", false);
         var resultWorldCup16 = worldCup.GetRoundOf16();
         var resultWorldCup8 = worldCup.GetQuaterFinals();
         var resultat = worldCup.GetWinnerW();
-        Console.WriteLine(resultat.Name);
+        var resultOfMatch = worldCup.GetJourney(equipe);
+        foreach(var r in resultOfMatch)
+        {
+            Console.WriteLine(r.ToStringMatch());
+        }
+        //Console.WriteLine(resultat.Name);
 
         //        var resultSemiFinal = worldCup.GetSemiFinals();
-        var resultSemiFinal = worldCup.GetFinal();
+        //var resultSemiFinal = worldCup.GetFinal();
         //        Console.WriteLine(resultSemiFinal.ToStringMatch());
 //            Console.WriteLine(resultat.Name);
 /*                foreach (var r in resultat)
