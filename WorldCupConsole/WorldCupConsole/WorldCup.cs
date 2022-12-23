@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Tracing;
+﻿using Microsoft.VisualBasic;
+using System.Diagnostics.Tracing;
 using System.Text.RegularExpressions;
 
 namespace WorldCupConsole;
@@ -9,6 +10,7 @@ public class WorldCup
     private string place;
     private List<Group> listOf8Groups = new List<Group>();
     private List<Match> listOf16Matchs = new List<Match>();
+    private const int yearOfWorldCup = 1930;
 
     public string Year
     {
@@ -150,5 +152,10 @@ public class WorldCup
             }
         }
         return listMatch;
+    }
+
+    public static int GetWorldCupFirstYear()
+    {
+        return yearOfWorldCup;
     }
 }
