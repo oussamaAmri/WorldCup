@@ -235,16 +235,7 @@ public class Program
         Group groupG = new Group(groupGMatchs, Groupe.GroupeG);
         Group groupH = new Group(groupHMatchs, Groupe.GroupeH);
 
-        //WorldCup
-/*        var resultGagnantA = groupA.GetQualifiedTeams();
-        var resultGagnantB = groupB.GetQualifiedTeams();
-        var resultGagnantC = groupC.GetQualifiedTeams();
-        var resultGagnantD = groupD.GetQualifiedTeams();
-        var resultGagnantE = groupE.GetQualifiedTeams();
-        var resultGagnantF = groupF.GetQualifiedTeams();
-        var resultGagnantG = groupG.GetQualifiedTeams();
-        var resultGagnantH = groupH.GetQualifiedTeams();*/
-        List<Match> listOf16Matchs = new List<Match>();
+        // WorldCup
         List<Group> listOf8Groups = new List<Group>();
         listOf8Groups.Add(groupA);
         listOf8Groups.Add(groupB);
@@ -255,81 +246,51 @@ public class Program
         listOf8Groups.Add(groupG);
         listOf8Groups.Add(groupH);
 
-        Match matchI1 = new Match(belgique, maroc, 0, 2, MatchTypes.RoundOf16);
-        Match matchI2 = new Match(croatie, canada, 4, 1, MatchTypes.RoundOf16);
-        Match matchI3 = new Match(croatie, belgique, 0, 0, MatchTypes.RoundOf16);
-        Match matchI4 = new Match(canada, maroc, 1, 2, MatchTypes.RoundOf16);
+        Match match16_1 = new Match(paysBas, usa, 3, 1, MatchTypes.RoundOf16);
+        Match match16_2 = new Match(argentine, australie, 2, 1, MatchTypes.RoundOf16);
+        Match match16_3 = new Match(japon, croatie, 1, 3, MatchTypes.RoundOf16);
+        Match match16_4 = new Match(bresil, coreeDuSud, 4, 1, MatchTypes.RoundOf16);
+        Match match16_5 = new Match(angleterre, senegal, 3, 0, MatchTypes.RoundOf16);
+        Match match16_6 = new Match(france, pologne, 3, 1, MatchTypes.RoundOf16);
+        Match match16_7 = new Match(maroc, espagne, 3, 0, MatchTypes.RoundOf16);
+        Match match16_8 = new Match(portugal, suisse, 6, 1, MatchTypes.RoundOf16);
 
-        Match matchJ1 = new Match(suisse, cameroun, 1, 0, MatchTypes.RoundOf16);
-        Match matchJ2 = new Match(bresil, serbie, 2, 0, MatchTypes.RoundOf16);
-        Match matchJ3 = new Match(cameroun, serbie, 3, 3, MatchTypes.RoundOf16);
-        Match matchJ4 = new Match(bresil, suisse, 1, 0, MatchTypes.RoundOf16);
-        Match matchJ5 = new Match(serbie, suisse, 2, 3, MatchTypes.RoundOf16);
-        Match matchJ6 = new Match(cameroun, bresil, 1, 0, MatchTypes.RoundOf16);
+        Match match4_1 = new Match(paysBas, argentine, 3, 4, MatchTypes.QuaterFinals);
+        Match match4_2 = new Match(croatie, bresil, 4, 2, MatchTypes.QuaterFinals);
+        Match match4_3 = new Match(angleterre, france, 1, 2, MatchTypes.QuaterFinals);
+        Match match4_4 = new Match(maroc, portugal, 1, 0, MatchTypes.QuaterFinals);
 
-        Match matchJ7 = new Match(uruguay, coreeDuSud, 0, 0, MatchTypes.RoundOf16);
-        Match matchJ8 = new Match(portugal, ghana, 3, 2, MatchTypes.RoundOf16);
-        Match matchJ9 = new Match(coreeDuSud, ghana, 2, 3, MatchTypes.RoundOf16);
-        Match matchJ10 = new Match(portugal, uruguay, 2, 0, MatchTypes.RoundOf16);
-        Match matchJ11 = new Match(ghana, uruguay, 0, 2, MatchTypes.RoundOf16);
-        Match matchJ12 = new Match(coreeDuSud, portugal, 2, 1, MatchTypes.RoundOf16);
+        Match match2_1 = new Match(argentine, croatie, 3, 0, MatchTypes.SemiFinals);
+        Match match2_2 = new Match(france, maroc, 2, 0, MatchTypes.SemiFinals);
 
-        listOf16Matchs.Add(matchI1);
-        listOf16Matchs.Add(matchI2);
-        listOf16Matchs.Add(matchI3);
-        listOf16Matchs.Add(matchI4);
-        listOf16Matchs.Add(matchJ1);
-        listOf16Matchs.Add(matchJ2);
-        listOf16Matchs.Add(matchJ3);
-        listOf16Matchs.Add(matchJ4);
-        listOf16Matchs.Add(matchJ5);
-        listOf16Matchs.Add(matchJ6);
-        listOf16Matchs.Add(matchJ7);
-        listOf16Matchs.Add(matchJ8);
-        listOf16Matchs.Add(matchJ9);
-        listOf16Matchs.Add(matchJ10);
-        listOf16Matchs.Add(matchJ11);
-        listOf16Matchs.Add(matchJ12);
+        Match match1_2 = new Match(croatie, maroc, 2, 1, MatchTypes.ThirdPlacePlayOff);
+        Match match1_1 = new Match(argentine, france, 4, 2, MatchTypes.Final);
 
+        List<Match> listOf16Matchs = new List<Match>();
+        listOf16Matchs.Add(match16_1);
+        listOf16Matchs.Add(match16_2);
+        listOf16Matchs.Add(match16_3);
+        listOf16Matchs.Add(match16_4);
+        listOf16Matchs.Add(match16_5);
+        listOf16Matchs.Add(match16_6);
+        listOf16Matchs.Add(match16_7);
+        listOf16Matchs.Add(match16_8);
+        listOf16Matchs.Add(match4_1);
+        listOf16Matchs.Add(match4_2);
+        listOf16Matchs.Add(match4_3);
+        listOf16Matchs.Add(match4_4);
+        listOf16Matchs.Add(match2_1);
+        listOf16Matchs.Add(match2_2);
+        listOf16Matchs.Add(match1_2);
+        listOf16Matchs.Add(match1_1);
 
-        Match matchJ13 = new Match(serbie, suisse, 2, 3, MatchTypes.QuaterFinals);
-        Match matchJ14 = new Match(cameroun, bresil, 1, 0, MatchTypes.QuaterFinals);
-
-        Match matchJ15 = new Match(uruguay, coreeDuSud, 0, 0, MatchTypes.QuaterFinals);
-        Match matchJ16 = new Match(portugal, ghana, 3, 2, MatchTypes.QuaterFinals);
-        Match matchJ17 = new Match(coreeDuSud, ghana, 2, 3, MatchTypes.QuaterFinals);
-        Match matchJ18 = new Match(portugal, uruguay, 2, 0, MatchTypes.QuaterFinals);
-        Match matchJ19 = new Match(ghana, uruguay, 0, 2, MatchTypes.QuaterFinals);
-        Match matchJ20 = new Match(coreeDuSud, portugal, 2, 1, MatchTypes.QuaterFinals);
-
- /*       listOf8Groups.Add(matchJ13);
-        listOf8Groups.Add(matchJ14);
-        listOf8Groups.Add(matchJ15);
-        listOf8Groups.Add(matchJ16);
-        listOf8Groups.Add(matchJ17);
-        listOf8Groups.Add(matchJ18);
-        listOf8Groups.Add(matchJ19);
-        listOf8Groups.Add(matchJ20);
- */
-        Match matchJ21 = new Match(coreeDuSud, ghana, 2, 3, MatchTypes.SemiFinals);
-        Match matchJ22 = new Match(portugal, uruguay, 2, 0, MatchTypes.SemiFinals);
-        Match matchJ23 = new Match(ghana, uruguay, 0, 2, MatchTypes.SemiFinals);
-        Match matchJ24 = new Match(coreeDuSud, portugal, 2, 1, MatchTypes.Final);
-/*
-        listOf8Groups.Add(matchJ21);
-        listOf8Groups.Add(matchJ22);
-        listOf8Groups.Add(matchJ23);
-        listOf8Groups.Add(matchJ24);
-*/
         WorldCup worldCup = new WorldCup("2022","Qatar", listOf8Groups, listOf16Matchs);
-        Team teamA = new Team(coreeDuSudPlayers, "Corée du Sud", false);
-        Team teamB = new Team(portugalPlayers, "Portugal", false);
 
         var resultWorldCup16 = worldCup.GetRoundOf16();
         var resultWorldCup8 = worldCup.GetQuaterFinals();
-//        var resultat = worldCup.GetWinnerW(teamA,teamB);
         var resultat = worldCup.GetWinnerW();
         Console.WriteLine(resultat.Name);
+
         //        var resultSemiFinal = worldCup.GetSemiFinals();
         var resultSemiFinal = worldCup.GetFinal();
         //        Console.WriteLine(resultSemiFinal.ToStringMatch());
