@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace WorldCupConsole;
+namespace WorldCupConsole.WorldCupExercice;
 
 public class Team
 {
@@ -10,23 +10,23 @@ public class Team
 
     public List<Player> ListPlayers
     {
-        get { return this.listPlayers; }
-        set { this.listPlayers = value; }
+        get { return listPlayers; }
+        set { listPlayers = value; }
     }
 
     public string Name
     {
-        get { return this.name; }
-        set { this.name = value; }
-    }
-    
-    public bool IsHost
-    {
-        get { return this.isHost; }
-        set { this.isHost = value; }
+        get { return name; }
+        set { name = value; }
     }
 
-    public Team(List<Player> listPlayers,string name,bool isHost)
+    public bool IsHost
+    {
+        get { return isHost; }
+        set { isHost = value; }
+    }
+
+    public Team(List<Player> listPlayers, string name, bool isHost)
     {
         this.listPlayers = listPlayers;
         this.name = name;

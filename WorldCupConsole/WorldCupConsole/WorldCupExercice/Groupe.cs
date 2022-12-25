@@ -1,4 +1,4 @@
-﻿namespace WorldCupConsole;
+﻿namespace WorldCupConsole.WorldCupExercice;
 public enum Groupe
 {
     GroupeA,

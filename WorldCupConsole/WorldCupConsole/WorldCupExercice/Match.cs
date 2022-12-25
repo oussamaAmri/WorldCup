@@ -1,4 +1,4 @@
-﻿namespace WorldCupConsole;
+﻿namespace WorldCupConsole.WorldCupExercice;
 
 public class Match
 {
@@ -11,41 +11,41 @@ public class Match
 
     public Team TeamA
     {
-        get { return this.teamA; }
-        set { this.teamA = value; }
+        get { return teamA; }
+        set { teamA = value; }
     }
 
     public Team TeamB
     {
-        get { return this.teamB; }
-        set { this.teamB = value; }
+        get { return teamB; }
+        set { teamB = value; }
     }
 
     public int TeamAscore
     {
-        get { return this.teamAscore; }
-        set { this.teamAscore = value; }
+        get { return teamAscore; }
+        set { teamAscore = value; }
     }
 
     public int TeamBscore
     {
-        get { return this.teamBscore; }
-        set { this.teamBscore = value; }
+        get { return teamBscore; }
+        set { teamBscore = value; }
     }
 
     public MatchTypes MatchTypes
     {
-        get { return this.matchTypes; }
-        set { this.matchTypes = value; }
+        get { return matchTypes; }
+        set { matchTypes = value; }
     }
 
-    public Match(Team teamA, Team teamB, int teamAscore,int teamBscore, MatchTypes matchTypes) 
+    public Match(Team teamA, Team teamB, int teamAscore, int teamBscore, MatchTypes matchTypes)
     {
-        this.teamA=teamA;
-        this.teamB=teamB;
-        this.teamAscore=teamAscore;
-        this.teamBscore=teamBscore;
-        this.matchTypes=matchTypes;
+        this.teamA = teamA;
+        this.teamB = teamB;
+        this.teamAscore = teamAscore;
+        this.teamBscore = teamBscore;
+        this.matchTypes = matchTypes;
     }
 
     static public int GetMatchDuration()
@@ -60,7 +60,7 @@ public class Match
 
     public Team GetWinner()
     {
-        if(teamAscore == teamBscore)
+        if (teamAscore == teamBscore)
         {
             return null;
         }

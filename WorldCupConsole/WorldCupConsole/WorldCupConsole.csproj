@@ -7,4 +7,14 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Code\**" />
+    <EmbeddedResource Remove="Code\**" />
+    <None Remove="Code\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Inheritance\" />
+  </ItemGroup>
+
 </Project>
