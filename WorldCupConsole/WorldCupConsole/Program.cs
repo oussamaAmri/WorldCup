@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics.Tracing;
 using System.Text.RegularExpressions;
+using WorldCupConsole.Inheritance;
 using WorldCupConsole.WorldCupExercice;
 using Group = WorldCupConsole.WorldCupExercice.Group;
 using Match = WorldCupConsole.WorldCupExercice.Match;
@@ -9,7 +10,23 @@ public class Program
 {
     private static void Main(string[] args)
     {
-        TestWorldCup(false);
+//        TestWorldCup(false);
+/***********************Triangle*********************/
+        Triangle triangle = new Triangle();
+        triangle.Cote1 = 10;
+        triangle.Cote2 = 5.5;
+        triangle.Cote3 = 7.5;
+        var perimetre = triangle.ComputePerimeter();
+        Console.WriteLine(perimetre);
+/***********************Carre************************/
+        Carre carre = new Carre();
+        Carre carre1 = new Carre();
+        carre.Cote = 5;
+        carre1.Cote = 6;
+        var perimetreC = carre.ComputePerimeter();
+        var perimetreC1 = carre1.ComputePerimeter();
+        Console.WriteLine(perimetreC);
+        Console.WriteLine(perimetreC1);
     }
 
     private static void TestWorldCup(bool isDisplay)
