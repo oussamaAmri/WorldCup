@@ -12,21 +12,19 @@ public class Program
     {
 //        TestWorldCup(false);
 /***********************Triangle*********************/
-        Triangle triangle = new Triangle();
-        triangle.Cote1 = 10;
-        triangle.Cote2 = 5.5;
-        triangle.Cote3 = 7.5;
+        Forme triangle = new Triangle(5, 6.5, 7.5);
         var perimetre = triangle.ComputePerimeter();
-        Console.WriteLine(perimetre);
 /***********************Carre************************/
-        Carre carre = new Carre();
-        Carre carre1 = new Carre();
-        carre.Cote = 5;
-        carre1.Cote = 6;
-        var perimetreC = carre.ComputePerimeter();
-        var perimetreC1 = carre1.ComputePerimeter();
-        Console.WriteLine(perimetreC);
-        Console.WriteLine(perimetreC1);
+        Forme carre = new Carre(5);
+        Forme carre1 = new Carre(7);
+        List <Forme> listForm = new List<Forme>();
+        listForm.Add(carre);
+        listForm.Add(carre1);
+        listForm.Add(triangle);
+        foreach(var l in listForm)
+        {
+            Console.WriteLine(l.ComputePerimeter());
+        }
     }
 
     private static void TestWorldCup(bool isDisplay)

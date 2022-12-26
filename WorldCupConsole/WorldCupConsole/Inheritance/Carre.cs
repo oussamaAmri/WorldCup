@@ -1,4 +1,6 @@
-﻿namespace WorldCupConsole.Inheritance;
+﻿using WorldCupConsole.WorldCupExercice;
+
+namespace WorldCupConsole.Inheritance;
 
 class Carre:Forme
 {
@@ -8,5 +10,10 @@ class Carre:Forme
     {
         var perimetre = Cote * 4;
         return perimetre;
+    }
+
+    public Carre(double Cote)
+    {
+        this.Cote = Cote;
     }
 }
