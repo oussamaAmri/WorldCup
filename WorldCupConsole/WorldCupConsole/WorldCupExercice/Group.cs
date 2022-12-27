@@ -51,7 +51,6 @@ public class Group
     }
     public List<Team> GetQualifiedTeams()
     {
-        var cpt = 0;
         var getTeams = GetTeams();
         var nbrEquipe = getTeams.Count;
         var listQualifiedTeams = new List<Team>();
