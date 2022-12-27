@@ -2,9 +2,9 @@
 
 internal class Utils
 {
-    internal static void SetSomeValue(int value) { }
+    public static void SetSomeValue(int value) { }
 
-    internal static bool GetSomeValue()
+    public static bool GetSomeValue()
     {
         throw new NotImplementedException();
     }

@@ -7,10 +7,4 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Code\**" />
-    <EmbeddedResource Remove="Code\**" />
-    <None Remove="Code\**" />
-  </ItemGroup>
-
 </Project>

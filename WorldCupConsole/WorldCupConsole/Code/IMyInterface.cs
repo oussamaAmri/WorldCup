@@ -1,6 +1,6 @@
 ﻿namespace WorldCupConsole.Code;
 
-internal interface IMyInterface
+public interface IMyInterface
 {
     List<bool> ComputeAverage(int value, string name);
 }

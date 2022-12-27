@@ -1,3 +1,4 @@
+using Microsoft.VisualStudio.TestPlatform.Utilities;
 using NFluent;
 using WorldCupConsole;
 
@@ -41,9 +42,9 @@ public class UnitTest1
     }
 
     [Theory]
-    [InlineData(0, 1)]
+    [InlineData(0, 0)]
     [InlineData(1, 1)]
-    [InlineData(2, 3)]
+    [InlineData(2, 1)]
     [InlineData(10, 55)]
     [InlineData(15, 610)]
     [InlineData(18, 2_584)]

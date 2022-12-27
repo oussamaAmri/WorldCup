@@ -1,19 +1,19 @@
 ﻿namespace WorldCupConsole.Code.Errors;
 
-internal class MyImplementation : IMyInterface
+public class MyImplementation : IMyInterface
 {
-    internal List<int> ComputeAverage(int name)
+    public List<bool> ComputeAverage(int value,string name) 
     {
         throw new NotImplementedException();
     }
 
-    internal void DoSomething()
+    public void DoSomething()
     {
-        Utils.SetSomeValue("1");
+        Utils.SetSomeValue(1);
 
-        int a = Utils.GetSomeValue();
+        bool a = Utils.GetSomeValue();
 
         var myList = new List<int>();
-        myList.Add("element");
+        myList.Add(1);
     }
 }
