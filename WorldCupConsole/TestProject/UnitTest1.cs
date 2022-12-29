@@ -112,8 +112,7 @@ public class UnitTest1
             [5] = "Green",
         };
 
-        var result = Algo.FilterDictionaryByKey(input);
-
+        var result = Algo.FilterDictionaryByValue(input);
         Check.That(result).ContainsExactly(KeyValuePair.Create(1, "Red"), KeyValuePair.Create(2, "Red"));
     }
 

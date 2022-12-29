@@ -1,9 +1,12 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
 namespace WorldCupConsole;
 
 public static class Algo
 {
+
     // FizzBuzz
     public static string FizzBuzz(int i)
     {
@@ -61,42 +64,92 @@ public static class Algo
     // Create a list
     public static List<int> CreateList()
     {
-        throw new NotImplementedException();
+        List<int> list = new List<int> { 1,2,3};
+        return list;
     }
 
     // Add element to a list
     public static List<int> AddElementToList(List<int> input)
     {
-        throw new NotImplementedException();
+        List<int> listAdd = new List<int> { 4};
+        foreach(var element in input)
+        {
+            listAdd.Add(element);
+        }
+        listAdd.Sort();
+        return listAdd;
     }
 
     // Add element to an array
     public static int[] AddElementToArray(int[] input)
     {
-        throw new NotImplementedException();
+        var elementArray = new int[4];
+        for (int i = 0; i < input.Length; i++)
+        {
+                elementArray[i] = input[i];
+        }
+        elementArray[elementArray.Length-1] = 4;
+        return elementArray;
     }
 
     // Filter dictionary by key >= 5
     public static Dictionary<int, string> FilterDictionaryByKey(Dictionary<int, string> input)
     {
-        throw new NotImplementedException();
+        var filtreKey = new Dictionary<int, string>();
+        filtreKey = input.Where(x=>x.Key >= 5).OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);
+        return filtreKey;
+        
     }
 
     // Filter dictionary by value == Red
     public static Dictionary<int, string> FilterDictionaryByValue(Dictionary<int, string> input)
     {
-        throw new NotImplementedException();
+        var filtreValue = new Dictionary<int, string>();
+        filtreValue = input.Where(x => x.Value == "Red").ToDictionary(x => x.Key, x => x.Value);
+        return filtreValue;
     }
 
     // Create dictionary
     public static Dictionary<string, int> ToDictionary(List<string> input)
     {
-        throw new NotImplementedException();
+        var CountValue = new Dictionary<string, int>();
+        foreach(var l in input)
+        {
+            if(CountValue.ContainsKey(l) == true)
+            {
+                CountValue[l] = CountValue[l] + 1;
+            }
+            else
+            { 
+                CountValue.Add(l,1);
+            }
+        }
+        return CountValue;
     }
 
     // Return input[index - 1] + input[index] + input[index + 1]
     public static int Sum(int[] input, int index)
     {
-        throw new NotImplementedException();
+        int sum = 0;
+        int n = input.Length; //5
+        for(int i = 0; i<=n-1; i++)
+        {
+            if (index > 0 && index < n-1)
+            {
+                sum += input[index - 1] + input[index] + input[index + 1];
+                break;
+            }
+            else if (index <= 0)
+            {
+                sum += input[index] + input[index+1];
+                break;
+            }
+            else if (index >= n-1)
+            {
+                sum += input[index - 1] + input[index];
+                break;
+            }
+        }
+        return sum;
     }
 }
