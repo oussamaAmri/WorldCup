@@ -18,7 +18,7 @@ public class UnitTest2
     }
 
     [Theory]
-    [InlineData("La Coupe du monde de football 2022 est la 22e édition de ce tournoi quadriennal.", 'c', 2)]
+    [InlineData("La coupe du monde de football 2022 est la 22e édition de ce tournoi quadriennal.", 'c', 2)]
     [InlineData("La mascotte officielle de la compétition est dévoilée le 1er avril 2022.", 'a', 4)]
     public void CountCharaters(string input1, char input2, int output)
     {

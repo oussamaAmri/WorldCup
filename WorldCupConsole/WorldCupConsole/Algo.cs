@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
+﻿using System.Linq;
 
 namespace WorldCupConsole;
 
@@ -40,9 +38,6 @@ public static class Algo
         string[] substring = input.Split();
         return substring.Where(w => w.Length > 7).Select(s =>s.Replace(".","")).ToList();
     }
-
-
-
 
     // Compute Fibonacci
     public static int Fibonacci(int input)
@@ -124,6 +119,7 @@ public static class Algo
                 CountValue.Add(l,1);
             }
         }
+           
         return CountValue;
     }
 
@@ -131,25 +127,19 @@ public static class Algo
     public static int Sum(int[] input, int index)
     {
         int sum = 0;
-        int n = input.Length; //5
-        for(int i = 0; i<=n-1; i++)
-        {
+        int n = input.Length;
             if (index > 0 && index < n-1)
             {
-                sum += input[index - 1] + input[index] + input[index + 1];
-                break;
+                sum = input[index - 1] + input[index] + input[index + 1];
             }
             else if (index <= 0)
             {
-                sum += input[index] + input[index+1];
-                break;
+                sum = input[index] + input[index+1];
             }
             else if (index >= n-1)
             {
-                sum += input[index - 1] + input[index];
-                break;
+                sum = input[index - 1] + input[index];
             }
-        }
         return sum;
     }
 }

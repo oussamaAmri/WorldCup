@@ -123,8 +123,7 @@ public class UnitTest1
 
         var result = Algo.ToDictionary(input);
 
-        var dicToCheck = result.OrderBy(x => x.Key).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-        Check.That(dicToCheck).ContainsExactly(
+        Check.That(result).Contains(
             KeyValuePair.Create("Blue", 1),
             KeyValuePair.Create("Green", 3),
             KeyValuePair.Create("Red", 2),

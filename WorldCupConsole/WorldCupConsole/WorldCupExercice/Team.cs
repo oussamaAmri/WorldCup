@@ -2,7 +2,7 @@
 
 namespace WorldCupConsole.WorldCupExercice;
 
-public class Team
+public class Team 
 {
     private List<Player> listPlayers = new List<Player>();
     private string name;
