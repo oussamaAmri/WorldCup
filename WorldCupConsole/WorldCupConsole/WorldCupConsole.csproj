@@ -7,4 +7,9 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="EmployeeExercice\" />
+    <Folder Include="VectorExercice\" />
+  </ItemGroup>
+
 </Project>
