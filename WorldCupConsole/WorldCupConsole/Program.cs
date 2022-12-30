@@ -1,29 +1,32 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Diagnostics.Tracing;
-using System.Text.RegularExpressions;
-using WorldCupConsole.Inheritance;
+﻿using WorldCupConsole.Inheritance;
 using WorldCupConsole.WorldCupExercice;
-using Group = WorldCupConsole.WorldCupExercice.Group;
-using Match = WorldCupConsole.WorldCupExercice.Match;
 
 public class Program
 {
     private static void Main(string[] args)
     {
-//        TestWorldCup(false);
-/***********************Triangle*********************/
-        Forme triangle = new Triangle(5, 6.5, 7.5);
-        var perimetre = triangle.ComputePerimeter();
-/***********************Carre************************/
-        Forme carre = new Carre(5);
-        Forme carre1 = new Carre(7);
-        List <Forme> listForm = new List<Forme>();
-        listForm.Add(carre);
-        listForm.Add(carre1);
-        listForm.Add(triangle);
-        foreach(var l in listForm)
+        //TestWorldCup(false);
+        //TestForm(false);
+    }
+
+    private static void TestForm(bool isDisplay)
+    {
+        if (isDisplay)
         {
-            Console.WriteLine(l.ComputePerimeter());
+            /***********************Triangle*********************/
+            Forme triangle = new Triangle(5, 6.5, 7.5);
+            var perimetre = triangle.ComputePerimeter();
+            /***********************Carre************************/
+            Forme carre = new Carre(5);
+            Forme carre1 = new Carre(7);
+            List<Forme> listForm = new List<Forme>();
+            listForm.Add(carre);
+            listForm.Add(carre1);
+            listForm.Add(triangle);
+            foreach (var l in listForm)
+            {
+                Console.WriteLine(l.ComputePerimeter());
+            }
         }
     }
 
