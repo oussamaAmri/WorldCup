@@ -1,10 +1,18 @@
-﻿using WorldCupConsole.Inheritance;
+﻿using WorldCupConsole.EmployeeExercice;
+using WorldCupConsole.Inheritance;
+using WorldCupConsole.VectorExercice;
 using WorldCupConsole.WorldCupExercice;
 
 public class Program
 {
     private static void Main(string[] args)
     {
+        var patron = new Patron("P10", "Am", "Oussama", new DateTime(1994,01,01), 20);
+        var vecteur = new Vecteur3D(2,3,4);
+        var norme = vecteur.GetNorme();
+        Console.WriteLine(norme);
+        var p = patron.GetSalaire();
+        Console.WriteLine(p);
         //TestWorldCup(false);
         //TestForm(false);
     }
