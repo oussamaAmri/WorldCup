@@ -1,4 +1,3 @@
-using Microsoft.VisualStudio.TestPlatform.Utilities;
 using NFluent;
 using WorldCupConsole;
 
@@ -33,6 +32,35 @@ public class UnitTest2
     public void CountWords(string input, int output)
     {
         var result = Algo2.CountWords(input);
+
+        Check.That(result).IsEqualTo(output);
+    }
+
+    [Theory]
+    [InlineData("Février", 92)]
+    [InlineData("Avril", 75)]
+    [InlineData("Août", 48)]
+    [InlineData("Octobre", 22)]
+    [InlineData("Décembre", 7)]
+    public void Accumulate(string input, int output)
+    {
+        var annualResult = new Dictionary<string, int>
+        {
+            ["Janvier"] = 20,
+            ["Février"] = 5,
+            ["Mars"] = 12,
+            ["Avril"] = 2,
+            ["Mai"] = 5,
+            ["Juin"] = 8,
+            ["Juillet"] = 12,
+            ["Août"] = 16,
+            ["Septembre"] = 10,
+            ["Octobre"] = 1,
+            ["Novembre"] = 14,
+            ["Décembre"] = 7,
+        };
+
+        var result = Algo2.Accumulate(annualResult, input);
 
         Check.That(result).IsEqualTo(output);
     }
