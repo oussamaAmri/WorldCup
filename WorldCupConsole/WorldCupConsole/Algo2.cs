@@ -31,4 +31,10 @@ public class Algo2
         }
         return cpt;
     }
+
+    // Compute accumulate result for example for October = October + November + December
+    public static int Accumulate(Dictionary<string, int> annualResult, string month)
+    {
+        throw new NotImplementedException();
+    }
 }
