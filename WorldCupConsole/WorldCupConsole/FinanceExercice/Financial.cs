@@ -1,4 +1,6 @@
-﻿namespace WorldCupConsole.FinanceExercice;
+﻿using System.Drawing;
+
+namespace WorldCupConsole.FinanceExercice;
 
 public static class Financial
 {
@@ -8,8 +10,7 @@ public static class Financial
     public static Point GetPointByDate(string actionName, DateTime dateTime)
     {
         var allActions = FakeData.GetActions();
-
-        throw new NotImplementedException();
+//        Point point = new Point(actionName,dateTime);
     }
 
     // Retourne une liste de points entre 2 dates pour une action donnée

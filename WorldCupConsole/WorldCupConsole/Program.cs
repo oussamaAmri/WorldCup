@@ -2,6 +2,7 @@
 using WorldCupConsole.Inheritance;
 using WorldCupConsole.VectorExercice;
 using WorldCupConsole.WorldCupExercice;
+using WorldCupConsole.BouleExercice;
 
 public class Program
 {
@@ -10,8 +11,24 @@ public class Program
         //TestEmploye(false);
         //TestWorldCup(false);
         //TestForm(false);
+        //        var boole = new Util();
+        //        var IsWin = boole.IsWin();
+        //        Console.WriteLine(IsWin);
     }
 
+ /*   private static void TestParking(bool isDisplay)
+    {
+        if (isDisplay)
+        {
+            var parking = new UtilP();
+            var vecteur = new Vecteur3D(2, 3, 4);
+            var norme = vecteur.GetNorme();
+            Console.WriteLine(norme);
+            var p = patron.GetSalaire();
+            Console.WriteLine(p);
+        }
+    }
+ */
     private static void TestEmploye(bool isDisplay)
     {
         if (isDisplay)

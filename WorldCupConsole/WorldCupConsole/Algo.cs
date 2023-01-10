@@ -24,6 +24,7 @@ public static class Algo
     // Return words with length more than 7 characters
     public static List<string> FilterString(string input)
     {
+        //Split() => est pour divisé une chaine en sous chaine 
         /*var list = new List<string>();
         string[] substring = input.Split(" ");
         foreach(var s in substring)
@@ -37,6 +38,17 @@ public static class Algo
         return list;*/
         string[] substring = input.Split();
         return substring.Where(w => w.Length > 7).Select(s =>s.Replace(".","")).ToList();
+    }
+    public static string FilterStringCharacteres(string input)
+    {
+        input = "tu vas bien";
+        string[] strings = input.Split('.');
+        bool isExcite = strings.Contains("u");
+        if (isExcite == true)
+        {
+            return input;
+        }
+        return input;
     }
 
     // Compute Fibonacci

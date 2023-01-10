@@ -1,4 +1,7 @@
-﻿namespace WorldCupConsole;
+﻿using System.Linq;
+using WorldCupConsole.EmployeeExercice;
+
+namespace WorldCupConsole;
 
 public class Algo2
 {
@@ -9,6 +12,18 @@ public class Algo2
         mergeArray = array1.Concat(array2).Distinct().ToArray();
         Array.Sort(mergeArray);
         return mergeArray;
+    }
+
+    //SumArray
+    public static int SumArray(int[] array,int n1,int n2)
+    {
+        int sum = 0;
+        int n = array.Length;
+        for(int i=0; i<n; i++)
+        {
+            sum += array[i];
+        }
+        return sum;
     }
 
     // Count c in input
@@ -32,9 +47,46 @@ public class Algo2
         return cpt;
     }
 
+    private static int GetMonthNumber(string month) 
+    {
+        return month switch
+        {
+            "Janvier" => 1,
+            "Février" => 2,
+            "Mars" => 3,
+            "Avril" => 4,
+            "Mai" => 5,
+            "Juin" => 6,
+            "Juillet" => 7,
+            "Août" => 8,
+            "Septembre" => 9,
+            "Octobre" => 10,
+            "Novembre" => 11,
+            "Décembre" => 12
+        };
+    }
+    private static bool IsAfterMonth(string month1, string month2)
+    {
+
+        var monthNumber1 = GetMonthNumber(month1); 
+        var monthNumber2 = GetMonthNumber(month2);
+        if (monthNumber1 <= monthNumber2)
+            return true;
+        else return false;
+    }
+
     // Compute accumulate result for example for October = October + November + December
     public static int Accumulate(Dictionary<string, int> annualResult, string month)
-    {
-        throw new NotImplementedException();
+    { 
+        int total = 0;
+        foreach (var l in annualResult)
+        {
+            if (IsAfterMonth(month,l.Key) == true)
+            {
+                total = l.Value + total;
+            }
+        }
+        return total;
+
     }
 }
