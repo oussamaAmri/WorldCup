@@ -1,4 +1,4 @@
-﻿namespace WorldCupConsole.ParkingExercice;
+﻿    namespace WorldCupConsole.ParkingExercice;
 
 public static class FakeData
 {

@@ -3,32 +3,49 @@ using WorldCupConsole.Inheritance;
 using WorldCupConsole.VectorExercice;
 using WorldCupConsole.WorldCupExercice;
 using WorldCupConsole.BouleExercice;
+using WorldCupConsole.FinanceExercice;
+using WorldCupConsole.ParkingExercice;
 
 public class Program
 {
     private static void Main(string[] args)
     {
+
+        //        var getPByDte = Financial.GetPointByDate("BOUYGUES", new DateTime(2020, 01, 12));
+        //        Console.WriteLine(getPByDte.Value);
+        //        Console.WriteLine(getPByDte.Date);
+                var parking = UtilP.PrendreUnePlace(Column.A,1);
+                foreach(var p in parking.FreePlaces)
+                { 
+                    Console.WriteLine(p.Occupe + " " + p.Etage + " " + p.Column);
+                }
+        /*        var GetPoints = Financial.GetPoints("BOUYGUES",new DateTime(2020, 01, 03), new DateTime(2020, 01, 09));
+                foreach (var P in GetPoints)
+                {
+                    Console.WriteLine(P.Value+" "+P.Date.ToShortDateString());
+                }*/
         //TestEmploye(false);
         //TestWorldCup(false);
         //TestForm(false);
         //        var boole = new Util();
         //        var IsWin = boole.IsWin();
         //        Console.WriteLine(IsWin);
-    }
+        //}
 
- /*   private static void TestParking(bool isDisplay)
-    {
-        if (isDisplay)
-        {
-            var parking = new UtilP();
-            var vecteur = new Vecteur3D(2, 3, 4);
-            var norme = vecteur.GetNorme();
-            Console.WriteLine(norme);
-            var p = patron.GetSalaire();
-            Console.WriteLine(p);
-        }
+        /*   private static void TestParking(bool isDisplay)
+           {
+               if (isDisplay)
+               {
+                   var parking = new UtilP();
+                   var vecteur = new Vecteur3D(2, 3, 4);
+                   var norme = vecteur.GetNorme();
+                   Console.WriteLine(norme);
+                   var p = patron.GetSalaire();
+                   Console.WriteLine(p);
+               }
+           }
+        */
     }
- */
     private static void TestEmploye(bool isDisplay)
     {
         if (isDisplay)

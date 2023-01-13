@@ -12,16 +12,29 @@
                 Ok = true,
                 FreePlaces = new List<Place> { }
             };
-            for(int i = 0;i<parking.Places.Length;i++)
+            for (int i = 0; i < parking.Places.Length; i++)
             {
                 var place = parking.Places[i];
-                if (place.Occupe == false)
+                if (place.Column == column && place.Etage == etage) 
                 {
-                    result.Ok = true;
+                    if (place.Occupe == true)
+                    {
+                        result.Ok = false;
+                    }
+                    else
+                    {
+                        result.Ok = true;
+                    }
                 }
-                else
+            }
+            if(result.Ok == false)
+            {
+                foreach(var p in parking.Places)
                 {
-                    result.FreePlaces.Add(place);
+                    if(p.Occupe == false)
+                    {
+                        result.FreePlaces.Add(p);
+                    }
                 }
             }
             return result;

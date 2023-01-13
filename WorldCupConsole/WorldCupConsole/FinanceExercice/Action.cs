@@ -1,4 +1,7 @@
-﻿namespace WorldCupConsole.FinanceExercice
+﻿using System.IO;
+using WorldCupConsole.WorldCupExercice;
+
+namespace WorldCupConsole.FinanceExercice
 {
     public class Action
     {
