@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using static System.Collections.Specialized.BitVector32;
 
 namespace WorldCupConsole.FinanceExercice;
-
+﻿
 public static class Financial
 {
     // Retourne le point pour une action donnée à une date donnée
@@ -14,7 +14,7 @@ public static class Financial
     public static Point GetPointByDate(string actionName, DateTime dateTime)
     {
         var allActions = FakeData.GetActions();
-        Point point = null;
+Point point = null;
         foreach (var action in allActions)
         {
             if (action.Name == actionName)

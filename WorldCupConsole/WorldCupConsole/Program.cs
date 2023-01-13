@@ -27,8 +27,8 @@ public class Program
         //TestEmploye(false);
         //TestWorldCup(false);
         //TestForm(false);
-        //        var boole = new Util();
-        //        var IsWin = boole.IsWin();
+        //var boole = new Util();
+        //var IsWin = boole.IsWin();
         //        Console.WriteLine(IsWin);
         //}
 
