@@ -14,11 +14,11 @@ public class Program
         //        var getPByDte = Financial.GetPointByDate("BOUYGUES", new DateTime(2020, 01, 12));
         //        Console.WriteLine(getPByDte.Value);
         //        Console.WriteLine(getPByDte.Date);
-                var parking = UtilP.PrendreUnePlace(Column.A,1);
-                foreach(var p in parking.FreePlaces)
-                { 
-                    Console.WriteLine(p.Occupe + " " + p.Etage + " " + p.Column);
-                }
+        //        var parking = UtilP.PrendreUnePlace(Column.A,1);
+        /*                foreach (var p in parking.FreePlaces)
+                        { 
+                            Console.WriteLine(p.Occupe + " " + p.Etage + " " + p.Column);
+                        }*/
         /*        var GetPoints = Financial.GetPoints("BOUYGUES",new DateTime(2020, 01, 03), new DateTime(2020, 01, 09));
                 foreach (var P in GetPoints)
                 {
@@ -27,9 +27,9 @@ public class Program
         //TestEmploye(false);
         //TestWorldCup(false);
         //TestForm(false);
-        //var boole = new Util();
-        //var IsWin = boole.IsWin();
-        //        Console.WriteLine(IsWin);
+    var boole = new Util();
+    var IsWin = boole.IsWin();
+    Console.WriteLine(IsWin);
         //}
 
         /*   private static void TestParking(bool isDisplay)

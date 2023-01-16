@@ -6,11 +6,18 @@ public class Util
     public bool IsWin()
     {
         var boules = FakeData.GetBoules_1();
-        for(int i = 0; i<=boules.Count-1;i++)
+        int i = 0;
+        bool trouver = false;
+        while(i<boules.Count-2)
         {
-            if (boules[i].Color == Color.Red && boules[i+1].Color == Color.Red && boules[i+2].Color == Color.Red) 
-                return true;
+
+                if (boules[i].Color == Color.Red && boules[i + 1].Color == Color.Red && boules[i+2].Color == Color.Red)
+                {
+                    trouver = true;
+                    return trouver;
+                }
+            i++;
         }
-        return false;
+        return trouver;
     }
 }

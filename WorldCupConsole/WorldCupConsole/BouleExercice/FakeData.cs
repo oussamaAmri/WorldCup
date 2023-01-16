@@ -51,15 +51,15 @@ public class FakeData
         {
             new Boule()
             {
+                Color = Color.Blue
+            },
+            new Boule()
+            {
+                Color = Color.Blue
+            },
+            new Boule()
+            {
                 Color = Color.Red
-            },
-            new Boule()
-            {
-                Color = Color.Blue
-            },
-            new Boule()
-            {
-                Color = Color.Blue
             },
             new Boule()
             {
