@@ -22,6 +22,11 @@ public static class Algo3
         throw new NotImplementedException();
     }
 
+    public static IEnumerable<int> Filter(IEnumerable<int> input)
+    {
+        throw new NotImplementedException();
+    }
+
     public static IEnumerable<Code2> TranslateA(IEnumerable<Code1> input)
     {
         throw new NotImplementedException();

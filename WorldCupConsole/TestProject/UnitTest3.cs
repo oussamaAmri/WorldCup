@@ -1,5 +1,6 @@
 using NFluent;
 using WorldCupConsole.LinqKata;
+using WorldCupConsole.ParkingExercice;
 
 namespace TestProject;
 
@@ -113,6 +114,19 @@ public class UnitTest3
         };
 
         Check.ThatCode(() => Algo3.GetElementD(input)).Throws<InvalidOperationException>();
+    }
+
+    [Fact]
+    public void Filter()
+    {
+        var input = new[]
+        {
+            7, 3, 6, 2, 7, 8, 9, 4
+        };
+
+        var result = Algo3.Filter(input);
+
+        Check.That(result).ContainsExactly(6, 2, 8, 4);
     }
 
     [Fact]
